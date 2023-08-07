@@ -1,5 +1,6 @@
 interface Repository {
     id: number
+    gitId: string
     name: string
     description: string
     language: string

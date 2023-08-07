@@ -1,14 +1,17 @@
 import React from "react"
 import { Alert, StyleSheet, Text, TouchableNativeFeedback, View } from 'react-native'
-import { StatusBar } from 'expo-status-bar'
 import Constants from 'expo-constants'
+import RepositoryList from "./RepositoriesList"
 
 const Main = () => {
     return (
         <View style={styles.container}>
-            <TouchableNativeFeedback onPress={() => Alert.alert("Text clicked")}>
-                <Text>Rate Repositories App</Text>
+            <TouchableNativeFeedback
+                onPress={() => Alert.alert("Easter egg", "You found it! Nice!")}>
+                <Text style={styles.title}>Rate Repositories App</Text>
             </TouchableNativeFeedback>
+
+            <RepositoryList />
         </View>
     )
 }
@@ -18,9 +21,12 @@ const styles = StyleSheet.create({
       flex: 1,
       marginTop: Constants.statusBarHeight,
       backgroundColor: '#fff',
-      // alignItems: 'center',
+      alignItems: 'center',
       // justifyContent: 'center',
     },
+    title: {
+        fontSize: 20,
+    }
   })
 
 export default Main
