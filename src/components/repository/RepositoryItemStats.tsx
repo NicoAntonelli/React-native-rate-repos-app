@@ -1,8 +1,10 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import StyledText from './StyledText'
-import Repository from '../entities/Repository'
-import Numbers from '../tools/Numbers'
+
+import Numbers from '../../tools/Numbers'
+import Repository from '../../entities/Repository'
+
+import StyledText from '../StyledText'
 
 interface IProps { repo: Repository }
 
@@ -51,7 +53,7 @@ const Styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        marginTop: 7
+        marginTop: 10
     }
 })
 

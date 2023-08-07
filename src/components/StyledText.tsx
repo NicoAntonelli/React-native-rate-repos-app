@@ -1,5 +1,6 @@
 import React from "react"
 import { StyleSheet, Text } from "react-native"
+
 import Theme from "../Theme"
 
 interface IProps {

@@ -1,7 +1,8 @@
 import React from "react"
 import { Alert, StyleSheet, Text, TouchableNativeFeedback, View } from 'react-native'
 import Constants from 'expo-constants'
-import RepositoryList from "./RepositoryList"
+
+import RepositoryList from "./repository/RepositoryList"
 
 const Main = () => {
     return (
@@ -21,9 +22,8 @@ const styles = StyleSheet.create({
       flex: 1,
       marginTop: Constants.statusBarHeight*2,
       backgroundColor: '#fff',
-      alignItems: 'center',
     },
-    title: { fontSize: 20 }
+    title: { fontSize: 20, alignSelf: "center" }
 })
 
 export default Main
