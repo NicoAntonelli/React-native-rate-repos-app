@@ -1,17 +1,18 @@
 import React from "react"
 import { StyleSheet, Text } from "react-native"
-import Theme from "../theme"
+import Theme from "../Theme"
 
 interface IProps {
     children: any,
     fontSize?: string,
     fontWeight?: string,
     color?: string,
+    align?: string,
     style?: any
 }
 
 const StyledText = (props: IProps, ...restOfProps: any[]) => {
-    const { children, color, fontSize, fontWeight, style } = props
+    const { children, fontSize, fontWeight, color, align, style } = props
 
     const textStyles = [
         styles.text,
@@ -23,6 +24,8 @@ const StyledText = (props: IProps, ...restOfProps: any[]) => {
         color == 'secondary' && styles.colorSecondary,
         color == 'textPrimary' && styles.colorTextPrimary,
         color == 'textSecondary' && styles.colorTextSecondary,
+        align == 'center' && styles.alignCenter,
+        style
     ]
 
     return (
@@ -47,6 +50,7 @@ const styles = StyleSheet.create({
     colorSecondary: { color: Theme.colors.secondary },
     colorTextPrimary: { color: Theme.colors.textPrimary },
     colorTextSecondary: { color: Theme.colors.textSecondary },
+    alignCenter: { textAlign: 'center' }
 })
 
 export default StyledText
