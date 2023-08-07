@@ -1,9 +1,10 @@
 const Theme = {
     colors: {
-        textPrimary: '#24292e',
-        textSecondary: '#586069',
         primary: '#0366d6',
         secondary: '#ddd',
+        textPrimary: '#24292e',
+        textSecondary: '#586069',
+        navbarPrimary: '#24292e',
         white: '#fff',
         black: '#222'
     },
