@@ -6,6 +6,7 @@ const Theme = {
         textSecondary: '#586069',
         navbarPrimary: '#24292e',
         white: '#fff',
+        gray: '#888',
         black: '#222'
     },
     fontSizes: {
