@@ -2,7 +2,7 @@ import React from 'react'
 import { Image, StyleSheet, View } from 'react-native'
 
 import Repository from '../../entities/Repository'
-import StyledText from '../StyledText'
+import StyledText from '../common/StyledText'
 import Theme from '../../Theme'
 
 interface IProps { repo: Repository }

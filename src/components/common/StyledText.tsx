@@ -1,7 +1,7 @@
 import React from "react"
 import { StyleSheet, Text } from "react-native"
 
-import Theme from "../Theme"
+import Theme from "../../Theme"
 
 interface IProps {
     children: any,

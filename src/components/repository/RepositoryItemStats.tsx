@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native'
 import Numbers from '../../tools/Numbers'
 import Repository from '../../entities/Repository'
 
-import StyledText from '../StyledText'
+import StyledText from '../common/StyledText'
 
 interface IProps { repo: Repository }
 
