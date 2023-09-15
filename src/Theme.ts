@@ -1,10 +1,13 @@
+import { Platform } from "react-native"
+
 const Theme = {
     colors: {
-        primary: '#0366d6',
+        primary: '#F44',
         secondary: '#ddd',
         textPrimary: '#24292e',
         textSecondary: '#586069',
         navbarPrimary: '#24292e',
+        navbarRed: '#F11',
         white: '#fff',
         gray: '#888',
         black: '#222'
@@ -16,7 +19,11 @@ const Theme = {
         small: 12
     },
     fonts: {
-        main: 'System'
+        main: Platform.select({
+            ios: 'San Francisco',
+            android: 'Roboto',
+            default: 'System'
+        }),
     },
     fontWeights: {
         normal: '400' as Weight,
@@ -24,6 +31,6 @@ const Theme = {
     }
 }
 
-type Weight = "400" | "700" | "normal" | "bold" | "100" | "200" | "300" | "500" | "600" | "800" | "900" | undefined
+type Weight = "normal" | "bold" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900" | undefined
 
 export default Theme
