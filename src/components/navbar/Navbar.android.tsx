@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         paddingTop: Constants.statusBarHeight + 15,
         paddingHorizontal: 10,
-        backgroundColor: Theme.colors.navbarRed
+        backgroundColor: Theme.colors.navbarPrimary
     },
     scroll: {
         paddingBottom: 10,
