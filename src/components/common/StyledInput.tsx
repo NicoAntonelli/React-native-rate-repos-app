@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     errorField: {
-        border: 1,
+        borderWidth: 1.5,
         borderColor: 'red'
     }
 })
