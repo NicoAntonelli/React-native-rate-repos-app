@@ -1,6 +1,7 @@
 import React from "react"
 import { StyleSheet, Text, View } from 'react-native'
 
+import Login from "./login/Login"
 import Navbar from "./navbar/Navbar"
 import RepositoryList from "./repository/RepositoryList"
 import { Routes, Route } from "react-router-native"
@@ -13,7 +14,7 @@ const Main = () => {
             <Navbar/>
             <Routes>
                 <Route path="/" element={<RepositoryList />}/>
-                <Route path="/login" element={working}/>
+                <Route path="/login" element={<Login />}/>
                 <Route path="/about" element={working}/>
             </Routes>
         </View>
