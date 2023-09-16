@@ -17,12 +17,28 @@ const Login = () => {
         password: ''
     }
 
+    const validation = (values: LoginData) => {
+        const errors: any = {}
+
+        const mailRegex = /^(([^<>()[\]\\.,;:\s@@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+        if (!values.email) errors.email = "Email is required"
+        else if (!mailRegex.test(values.email)) errors.email = "Invalid email address"
+        
+        if (!values.password) errors.password = "Password is required"
+        else if (values.password.length < 8) errors.password = "Password should be at least 8 characters long"
+
+        console.log(errors)
+        return errors
+    }
+
     const submitForm = (values: LoginData) => {
         console.log(values);
     }
 
     return <Formik
         initialValues={initialValues}
+        validate={validation}
         onSubmit={values => submitForm(values)}>
         {({handleSubmit}) => {
             return (
